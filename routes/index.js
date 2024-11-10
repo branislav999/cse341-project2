@@ -14,20 +14,37 @@ async function connectDB() {
 
 connectDB().catch(console.error);
 
-
+/**
+ * @swagger
+ * /users/:
+ *   get:
+ *     summary: Retrieve users
+ *     responses:
+ *       200:
+ *         description: A list of users
+ */
 router.get('/users/',async (req, res) => {
     try {
         const database = client.db('language');
         const collection = database.collection('users');
-        const contacts = await collection.find().toArray();
-        console.log(contacts);
-        res.json(contacts);
+        const users = await collection.find().toArray();
+        res.json(users);
     } catch (error) {
         res.status(500).json({message: error.message});
     }
 
 });
 
+
+/**
+ * @swagger
+ * /users/:
+ *   post:
+ *     summary: Add a user
+ *     responses:
+ *       200:
+ *         description: Insert a user
+ */
 router.post('/users/', async(req, res) => {
     const {userId, name, email, languagesLearning, completedLessons, points} = req.body;
 
@@ -36,12 +53,12 @@ router.post('/users/', async(req, res) => {
     }
 
     try{
-        const database = client.db('cse340');
-        const collection = database.collection('contacts');
+        const database = client.db('language');
+        const collection = database.collection('users');
 
-        const contact = {userId, name, email, languagesLearning, completedLessons, points};
+        const user = {userId, name, email, languagesLearning, completedLessons, points};
 
-        const insert = await collection.insertOne(contact);
+        const insert = await collection.insertOne(user);
 
         res.status(201).json({id: insert.insertedId});
     } catch (error) {

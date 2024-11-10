@@ -9,8 +9,8 @@
     },
     {
         "userId": 2,
-        "name": "Kayla Nichols",
-        "email": "kayla.nichols@example.com",
+        "name": "Kayla Rasmussen",
+        "email": "kayla.rasmussen@example.com",
         "languagesLearning": ["Serbian", "Spanish"],
         "completedLessons": [1, 3],
         "points": 100

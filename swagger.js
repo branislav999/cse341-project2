@@ -5,12 +5,12 @@ const doc = {
         title: 'Course API',
         description: 'Holds information about users',
     },
-    host: 'cse341-joqm.onrender.com',
+    host: 'cse341-project2-a80q.onrender.com',
     schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
-const endpointFiles = ['./routes/contacts.js']
+const endpointFiles = ['./routes/index.js']
 
 swaggerAutogen(outputFile, endpointFiles, doc);
 
