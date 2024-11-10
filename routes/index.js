@@ -48,7 +48,7 @@ router.get('/users/',async (req, res) => {
 router.post('/users/', async(req, res) => {
     const {userId, name, email, languagesLearning, completedLessons, points} = req.body;
 
-    if (!firstName || !lastName || !email || !favoriteColor || !birthday) {
+    if (!name || !email || !languagesLearning || !completedLessons || !points) {
         return res.status(400).json({message: 'Missing the required field'});
     }
 

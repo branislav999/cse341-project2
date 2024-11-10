@@ -4,6 +4,13 @@ const router = require('./routes/index');
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger.json');
+const cors = require('cors');
+
+
+
+app.use(cors());  
+
+
 
 app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
