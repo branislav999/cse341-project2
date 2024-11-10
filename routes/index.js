@@ -11,12 +11,11 @@ async function connectDB() {
 }
 
 
-
 connectDB().catch(console.error);
 
 /**
  * @swagger
- * /users/:
+ * /users/
  *   get:
  *     summary: Retrieve users
  *     responses:
@@ -38,7 +37,7 @@ router.get('/users/',async (req, res) => {
 
 /**
  * @swagger
- * /users/:
+ * /users/
  *   post:
  *     summary: Add a user
  *     responses:
