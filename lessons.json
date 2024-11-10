@@ -1,0 +1,46 @@
+[
+    {
+        "lessonId": 1,
+        "title": "Osnovne fraze",
+        "language": "sr",
+        "content": [
+            {"phrase": "Zdravo", "translation": "Hello"},
+            {"phrase": "Hvala", "translation": "Thank you"},
+            {"phrase": "Molim", "translation": "Please"}
+        ],
+        "difficulty": "beginner"
+    },
+    {
+        "lessonId": 2,
+        "title": "Brojevi 1-10",
+        "language": "sr",
+        "content": [
+            {"phrase": "Jedan", "translation": "One"},
+            {"phrase": "Dva", "translation": "Two"},
+            {"phrase": "Tri", "translation": "Three"},
+            {"phrase": "Četiri", "translation": "Four"},
+            {"phrase": "Pet", "translation": "Five"},
+            {"phrase": "Šest", "translation": "Six"},
+            {"phrase": "Sedam", "translation": "Seven"},
+            {"phrase": "Osam", "translation": "Eight"},
+            {"phrase": "Devet", "translation": "Nine"},
+            {"phrase": "Deset", "translation": "Ten"}
+        ],
+        "difficulty": "beginner"
+    },
+    {
+        "lessonId": 3,
+        "title": "Dani u nedelji",
+        "language": "sr",
+        "content": [
+            {"phrase": "Ponedeljak", "translation": "Monday"},
+            {"phrase": "Utorak", "translation": "Tuesday"},
+            {"phrase": "Sreda", "translation": "Wednesday"},
+            {"phrase": "Četvrtak", "translation": "Thursday"},
+            {"phrase": "Petak", "translation": "Friday"},
+            {"phrase": "Subota", "translation": "Saturday"},
+            {"phrase": "Nedelja", "translation": "Sunday"}
+        ],
+        "difficulty": "beginner"
+    }
+]
