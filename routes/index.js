@@ -41,7 +41,7 @@ router.get('/users/',async (req, res) => {
  *   post:
  *     summary: Add a user
  *     responses:
- *       200:
+ *       201:
  *         description: Insert a user
  */
 router.post('/users/', async(req, res) => {
