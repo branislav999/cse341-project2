@@ -13,7 +13,9 @@ app.use(express.json());
 
 app.use('/api-docs',swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+})
 
 const PORT = process.env.PORT || 5000
 
