@@ -1,0 +1,16 @@
+### Retrieve Users
+GET https://cse341-project2-a80q.onrender.com/users/
+Content-Type: application/json
+
+### Add a New User
+POST https://cse341-project2-a80q.onrender.com/users/
+Content-Type: application/json
+
+{
+    "userId": "any",
+    "name": "any",
+    "email": "any",
+    "languagesLearning": "any",
+    "completedLessons": "any",
+    "points": "amy"
+}
