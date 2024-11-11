@@ -4,13 +4,18 @@ const uri = process.env.MongoDBString;
 const client = new MongoClient(uri);
 
 async function connectDB() {
-    await client.connect();
+    try {
+        await client.connect();
+        console.log('Connected to MongoDB successfully');
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error.message);
+    }
 }
 
-connectDB().catch(console.error);
-
+connectDB();
 
 const getUser = async (req, res) => {
+        
     try {
         const database = client.db('language');
         const collection = database.collection('users');

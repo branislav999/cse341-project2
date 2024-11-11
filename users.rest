@@ -7,10 +7,31 @@ POST https://cse341-project2-a80q.onrender.com/users/
 Content-Type: application/json
 
 {
+    "userId": "user123",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "languagesLearning": "Spanish",
+    "completedLessons": 5,
+    "points": 50
+}
+
+### Retrieve User by ID
+GET https://cse341-project2-a80q.onrender.com/users/{userId}
+Content-Type: application/json
+
+### Modify a User
+PUT https://cse341-project2-a80q.onrender.com/users/{userId}
+Content-Type: application/json
+
+{
     "userId": "any",
     "name": "any",
     "email": "any",
     "languagesLearning": "any",
     "completedLessons": "any",
-    "points": "amy"
+    "points": "any"
 }
+
+### Delete a User
+DELETE https://cse341-project2-a80q.onrender.com/users/6731c5636f6926b868a01dcf
+Content-Type: application/json
