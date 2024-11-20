@@ -7,13 +7,14 @@ POST https://cse341-project2-a80q.onrender.com/users/
 Content-Type: application/json
 
 {
-    "userId": "user123",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "languagesLearning": "Spanish",
-    "completedLessons": 5,
-    "points": 50
+  "userId": 1,
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "languagesLearning": ["English", "Spanish"],
+  "completedLessons": [1, 2, 3],
+  "points": 100
 }
+
 
 ### Retrieve User by ID
 GET https://cse341-project2-a80q.onrender.com/users/{userId}

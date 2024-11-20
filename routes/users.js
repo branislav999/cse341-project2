@@ -3,6 +3,15 @@ const router = express.Router();
 const controllers = require('../controllers/users');
 const { userValidationRules, validate } = require('../validation/validator')
 
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+      return next(); 
+    }
+    res.redirect('/'); 
+  }
+  
+router.use(ensureAuthenticated);
+
 
 /**
  * @swagger
@@ -64,4 +73,4 @@ router.put('/users/:id', controllers.putUser);
 router.delete('/users/:id', controllers.deleteUser);
 
 
-module.exports = router;
+module.exports = { router , ensureAuthenticated }
