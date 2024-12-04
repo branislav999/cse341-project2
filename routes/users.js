@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
-const controllers = require('../controllers/users');
+const usersRouter = express.Router();
+const usersControllers = require('../controllers/users');
 const { userValidationRules, validate } = require('../validation/validator')
 
 function ensureAuthenticated(req, res, next) {
@@ -10,7 +10,7 @@ function ensureAuthenticated(req, res, next) {
     res.redirect('/'); 
   }
   
-router.use(ensureAuthenticated);
+usersRouter.use(ensureAuthenticated);
 
 
 /**
@@ -22,7 +22,7 @@ router.use(ensureAuthenticated);
  *       200:
  *         description: A list of users
  */
-router.get('/users/', controllers.getUser);
+usersRouter.get('/users/', usersControllers.getUser);
 
 
 /**
@@ -34,7 +34,7 @@ router.get('/users/', controllers.getUser);
  *       200:
  *         description: A user
  */
-router.get('/users/:id', controllers.getUserById);
+usersRouter.get('/users/:id', usersControllers.getUserById);
 
 
 /**
@@ -46,7 +46,7 @@ router.get('/users/:id', controllers.getUserById);
  *       201:
  *         description: Insert a user
  */
-router.post('/users/', userValidationRules(), validate, controllers.postUser);
+usersRouter.post('/users/', userValidationRules(), validate, usersControllers.postUser);
 
 
 /**
@@ -58,7 +58,7 @@ router.post('/users/', userValidationRules(), validate, controllers.postUser);
  *       201:
  *         description: Modify a user by id
  */
-router.put('/users/:id', controllers.putUser);
+usersRouter.put('/users/:id', usersControllers.putUser);
 
 
 /**
@@ -70,7 +70,7 @@ router.put('/users/:id', controllers.putUser);
  *       200:
  *         description: Delete a user by id
  */
-router.delete('/users/:id', controllers.deleteUser);
+usersRouter.delete('/users/:id', usersControllers.deleteUser);
 
 
-module.exports = { router , ensureAuthenticated }
+module.exports = { usersRouter , ensureAuthenticated }

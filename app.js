@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
-const {router, ensureAuthenticated} = require('./routes/users');
+const {usersRouter, ensureAuthenticated} = require('./routes/users');
 require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger.json');
 const cors = require('cors');
 const passport = require('passport');
 const session = require('express-session');
+const { lessonsRouter } = require('./routes/lessons');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 
@@ -67,11 +68,9 @@ process.on('uncaughtException', (err, origin) => {
 
 const PORT = process.env.PORT || 5000
 
-// app.get('/', (req, res) => {
-//     res.send("Sve sad imam sto sam tia");
-// });
 
-app.use(router);
+app.use(usersRouter);
+app.use(lessonsRouter);
 app.use(async (req, res, next) => {
     next({status: 404, message: 'Sorry, the page cannot be found'});
 });

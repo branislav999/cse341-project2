@@ -21,7 +21,7 @@ GET https://cse341-project2-a80q.onrender.com/users/{userId}
 Content-Type: application/json
 
 ### Modify a User
-PUT https://cse341-project2-a80q.onrender.com/users/{userId}
+PUT https://cse341-project2-a80q.onrender.com/users/672577a8f621f155f1bb312d
 Content-Type: application/json
 
 {
