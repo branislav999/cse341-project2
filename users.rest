@@ -8,8 +8,8 @@ Content-Type: application/json
 
 {
   "userId": 1,
-  "name": "John Doe",
-  "email": "johndoe@example.com",
+  "name": "Branislav Vidic",
+  "email": "branislavvidic@example.com",
   "languagesLearning": ["English", "Spanish"],
   "completedLessons": [1, 2, 3],
   "points": 100
@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ### Retrieve User by ID
-GET https://cse341-project2-a80q.onrender.com/users/{userId}
+GET https://cse341-project2-a80q.onrender.com/users/672577a8f621f155f1bb312d
 Content-Type: application/json
 
 ### Modify a User
